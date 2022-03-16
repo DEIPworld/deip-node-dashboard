@@ -1,33 +1,18 @@
-#!/usr/bin/env bash
-# Copyright 2017-2022 @polkadot/apps authors & contributors
-# This software may be modified and distributed under the terms
-# of the Apache-2.0 license. See the LICENSE file for details.
-
-# fail fast on any non-zero exits
+#!/bin/bash
 set -e
 
-# the docker image name and dockerhub repo
-NAME="polkadot-js-apps"
-REPO="jacogr"
+TAG=$(git log -1 --pretty=%h)
+LATEST="latest"
+ORG="deipworld"
+IMAGE_PREFIX="$1"
 
-# extract the current npm version from package.json
-VERSION=$(cat package.json \
-  | grep version \
-  | head -1 \
-  | awk -F: '{ print $2 }' \
-  | sed 's/[",]//g' \
-  | sed 's/ //g')
+echo "Building $ORG/$IMAGE_PREFIX-chain-dashboard image..."
+export IMAGE_NAME="$ORG/$IMAGE_PREFIX-chain-dashboard:$TAG"
+export LATEST_IMAGE_NAME="$ORG/$IMAGE_PREFIX-chain-dashboard:$LATEST"
 
-echo "*** Building $NAME"
-docker build -t $NAME -f docker/Dockerfile .
-
-docker login -u $REPO -p $DOCKER_PASS
-
-echo "*** Tagging $REPO/$NAME"
-if [[ $VERSION != *"beta"* ]]; then
-  docker tag $NAME $REPO/$NAME:$VERSION
-fi
-docker tag $NAME $REPO/$NAME
-
-echo "*** Publishing $NAME"
-docker push $REPO/$NAME
+docker build -t=${IMAGE_NAME} .
+docker tag ${IMAGE_NAME} ${LATEST_IMAGE_NAME}
+docker push ${IMAGE_NAME}
+docker push ${LATEST_IMAGE_NAME}
+docker rmi ${IMAGE_NAME}
+docker rmi ${LATEST_IMAGE_NAME}
