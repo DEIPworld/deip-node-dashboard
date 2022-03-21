@@ -46,6 +46,7 @@ import chainStandard from './chains/standard.png';
 import chainTuring from './chains/turing.png';
 import chainUnique from './chains/unique.svg';
 import chainUnorthodox from './chains/unorthodox.png';
+import chainDeip from './chains/deip.png';
 import extensionPolkadotJs from './extensions/polkadot-js.svg';
 import externalCommonwealth from './external/commonwealth.png';
 import externalDotreasury from './external/dotreasury.svg';
@@ -182,6 +183,8 @@ import emptyLogo from './empty.svg';
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via system.chain RPC
 export const chainLogos = Object.entries({
+  'DEIP': chainDeip,
+  'DEIP Testnet': chainDeip,
   'Ajuna Testnet': nodeAjuna,
   'Aleph Zero': chainAleph,
   'Aleph Zero Testnet': chainAleph,
@@ -355,6 +358,7 @@ export const chainLogos = Object.entries({
 // Alphabetical overrides based on the actual software node type
 // NOTE: This is as retrieved via system.name RPC
 export const nodeLogos = Object.entries({
+  'DEIP Node': chainDeip,
   'Acala Node': chainAcala,
   'Ajuna Node': nodeAjuna,
   'Apron Node': nodeApron,
@@ -543,6 +547,7 @@ export const specLogos = Object.entries({
 // (Generally would be the 'network' key in the known ss58 as per
 // https://github.com/polkadot-js/common/blob/master/packages/networks/src/index.ts)
 export const namedLogos: Record<string, unknown> = {
+  deip: chainDeip,
   acala: chainAcala,
   ajuna: nodeAjuna,
   aleph: chainAleph,

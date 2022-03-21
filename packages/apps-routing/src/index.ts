@@ -52,8 +52,8 @@ export default function create (t: TFunction): Routes {
     membership(t),
     parachains(t),
     gilt(t),
-    assets(t),
-    nfts(t),
+    // assets(t),
+    // nfts(t),
     society(t),
     calendar(t),
     contracts(t),
@@ -62,7 +62,7 @@ export default function create (t: TFunction): Routes {
     rpc(t),
     signing(t),
     sudo(t),
-    files(t),
+    // files(t),
     js(t),
     settings(t)
   ];

@@ -47,7 +47,8 @@ function NetworkDisplay ({ apiUrl, className = '', setApiUrl, value: { icon, isC
         <ChainImg
           className='endpointIcon'
           isInline
-          logo={icon === 'local' ? 'empty' : (icon || 'empty')}
+          // logo={icon === 'local' ? 'empty' : (icon || 'empty')}
+          logo={'deip'}
           withoutHl
         />
         <div className='endpointValue'>{name}</div>
