@@ -18,7 +18,7 @@ module.exports = merge(
     },
     plugins: [
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'DEIP Portal',
+        PAGE_TITLE: 'DEIP Dashboard',
         inject: true,
         template: path.join(__dirname, 'public/index.html')
       })

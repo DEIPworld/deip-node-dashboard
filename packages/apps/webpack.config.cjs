@@ -17,7 +17,7 @@ module.exports = merge(
     devtool: process.env.BUILD_ANALYZE ? 'source-map' : false,
     plugins: [
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'DEIP Portal',
+        PAGE_TITLE: 'DEIP Dashboard',
         inject: true,
         template: path.join(context, `${hasPublic ? 'public/' : ''}index.html`)
       })
