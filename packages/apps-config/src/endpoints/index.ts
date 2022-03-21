@@ -15,7 +15,7 @@ export { CUSTOM_ENDPOINT_KEY } from './development';
 export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = true): LinkOption[] {
   return [
     ...createCustom(t),
-    {
+    /* {
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
@@ -74,7 +74,7 @@ export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = t
       text: t('rpc.header.dev', 'Development', { ns: 'apps-config' }),
       textBy: '',
       value: ''
-    },
+    }, */
     ...createDev(t),
     ...createOwn(t)
   ].filter(({ isDisabled }) => !isDisabled);

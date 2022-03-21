@@ -23,13 +23,13 @@ export function createCustom (t: TFunction): LinkOption[] {
     ? [
       {
         isHeader: true,
-        text: t('rpc.dev.custom', 'Custom environment', { ns: 'apps-config' }),
+        text: t('rpc.dev.custom', 'DEIP environment', { ns: 'apps-config' }),
         textBy: '',
         value: ''
       },
       {
         info: 'WS_URL',
-        text: t('rpc.dev.custom.entry', 'Custom {{WS_URL}}', { ns: 'apps-config', replace: { WS_URL } }),
+        text: t('rpc.dev.custom.entry', 'DEIP Testnet {{WS_URL}}', { ns: 'apps-config', replace: { WS_URL } }),
         textBy: WS_URL,
         value: WS_URL
       }
