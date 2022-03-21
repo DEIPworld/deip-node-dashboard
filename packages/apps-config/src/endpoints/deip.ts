@@ -18,7 +18,7 @@ export function createDeip(t: TFunction): LinkOption[] {
       info: 'deip',
       homepage: 'https://deip.world',
       text: t('rpc.deip.endpoint', 'DEIP endpoint', { ns: 'apps-config' }),
-      textBy: "Octopus Network",
+      textBy: "Coming soon",
       // TODO: replace with Mainnet endpoint
       value: ""
     }
@@ -39,7 +39,7 @@ export function createTestnetDeip(t: TFunction): LinkOption[] {
       info: 'deip',
       homepage: 'https://deip.world',
       text: t('rpc.deip.testnet.endpoint', 'DEIP Testnet endpoint', { ns: 'apps-config' }),
-      textBy: "Octopus Network",
+      textBy: "Octopus Network wss://gateway.testnet.octopus.network/deip/46v4p8ss613olf92p2scmsjud68mhzrr",
       value: "wss://gateway.testnet.octopus.network/deip/46v4p8ss613olf92p2scmsjud68mhzrr"
     }
   ]
