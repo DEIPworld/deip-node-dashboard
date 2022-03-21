@@ -9,13 +9,16 @@ import { createProduction } from './production';
 import { createKusamaRelay, createPolkadotRelay } from './productionRelays';
 import { createTesting } from './testing';
 import { createRococoRelay, createWestendRelay } from './testingRelays';
+import { createDeip, createTestnetDeip } from './deip';
 
 export { CUSTOM_ENDPOINT_KEY } from './development';
 
 export function createWsEndpoints (t: TFunction, firstOnly = false, withSort = true): LinkOption[] {
   return [
-    ...createCustom(t),
-    /* {
+    ...createDeip(t),
+    ...createTestnetDeip(t),
+    /* ...createCustom(t),
+    {
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
