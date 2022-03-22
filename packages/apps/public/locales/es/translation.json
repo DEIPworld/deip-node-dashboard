@@ -634,7 +634,7 @@
   "Unbonding {{value}}": "Desvinculando {{value}}",
   "Uncaught error. Something went wrong with the query and rendering of this component. {{message}}": "{{message}} Un error no descubierto. Algo salió mal con la consulta y la representación de este componente.",
   "Unit": "Unidad",
-  "Unit decides the name of 1 unit token, e.g. \"DOT\" for DEIP": "La unidad decide el nombre de un token de unidad, por ejemplo \"DEIP\" para DEIP",
+  "Unit decides the name of 1 unit token, e.g. \"DEIP\" for DEIP platform": "La unidad decide el nombre de un token de unidad, por ejemplo \"DEIP\" para DEIP",
   "Unknown": "desconocido",
   "Unlock": "Desbloquear",
   "Unlock account": "Desbloquear cuenta",
